@@ -329,12 +329,13 @@ button {
 }
 .icon-list {
   display: flex;
-  gap: 24px;
   justify-content: center;
+  gap: 24px;
   margin: 32px 0;
 }
-.item-icon {
+.team-item-icon {
   align-items: center;
+  gap: 24px;
   height: 40px;
 }
 .icon-link {
@@ -388,7 +389,7 @@ button {
 }
 .portfolio-item:hover .portfolio-cover-text {
   transform: translateY(0);
-  box-shadow: зі значенням 0px 1px 6px rgba(46, 47, 66, 0.08),
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
@@ -507,6 +508,7 @@ button {
   height: 24px;
   letter-spacing: 0.02em;
   color: #fff;
+  margin-bottom: 16px;
 }
 .icon-list {
   display: flex;
