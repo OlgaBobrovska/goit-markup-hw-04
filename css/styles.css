@@ -53,6 +53,8 @@ button {
 /* Header */
 .header-page {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
   display: flex;
@@ -112,18 +114,19 @@ button {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #2e2f42;
+  color: #404bbf;
   position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-item-link-studio::after {
-  content: " ";
+  content: "";
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: #404bbf;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   top: 93px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) color 250ms
     cubic-bezier(0.4, 0, 0.2, 1);
@@ -152,8 +155,7 @@ button {
   letter-spacing: 0.02em;
   color: #434455;
   font-style: normal;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) color 250ms
-    cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-item-link:hover,
 .address-item-link:focus {
@@ -208,8 +210,7 @@ button {
   margin-right: auto;
   align-items: center;
   margin-top: 48px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) color 250ms
-    cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -239,8 +240,9 @@ button {
 .features-item {
   flex-basis: calc((100% - 3 * 24px) / 4);
 }
-.antenna-container {
+.svg-container {
   display: flex;
+  align-items: center;
   justify-content: center;
   padding-top: 24px;
   background: #f4f4fd;
@@ -248,37 +250,9 @@ button {
   border-radius: 4px;
   width: 264px;
   height: 112px;
+  margin-bottom: 8px;
 }
-.clock-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 24px;
-  background: #f4f4fd;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  width: 264px;
-  height: 112px;
-}
-.diagram-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 24px;
-  background: #f4f4fd;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  width: 264px;
-  height: 112px;
-}
-.astronaut-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 24px;
-  background: #f4f4fd;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  width: 264px;
-  height: 112px;
-}
+
 .features-sub-title {
   font-weight: 500;
   font-size: 20px;
@@ -361,6 +335,7 @@ button {
 }
 .item-icon {
   align-items: center;
+  height: 40px;
 }
 .icon-link {
   display: flex;
@@ -369,13 +344,13 @@ button {
   fill: #f4f4fd;
   stroke: #f4f4fd;
   width: 40px;
-  height: 40px;
+  height: 100%;
   border-radius: 50%;
   background: #4d5ae5;
   margin: 32px 0;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .icon-link:hover,
 .icon-link:focus {
   background-color: #404bbf;
@@ -409,9 +384,12 @@ button {
   margin-bottom: 48px;
   border: 1px solid #e7e9fc;
   width: 360px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item:hover .portfolio-cover-text {
   transform: translateY(0);
+  box-shadow: зі значенням 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-cover-wrap {
@@ -423,6 +401,7 @@ button {
   top: 0;
   left: 0;
   padding: 32px;
+  padding: 40px 32px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -510,7 +489,7 @@ button {
   min-width: 264px;
   width: 460px;
   height: 72px;
-  /* margin-right: 120px; */
+  margin-bottom: 16px;
 }
 .footer-social-media {
   align-items: baseline;
@@ -532,6 +511,7 @@ button {
 .icon-list {
   display: flex;
   margin-top: 16px;
+  gap: 16px;
 }
 .icon-link-footer {
   display: flex;
@@ -542,8 +522,7 @@ button {
   height: 40px;
   border-radius: 50%;
   background: #4d5ae5;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-link-footer:hover,
 .icon-link-footer:focus {
